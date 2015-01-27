@@ -1,0 +1,14 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+.containerdiv {
+  @include outer-container;
+  }
+
+.usercontainer {
+  @include span-columns(4);
+}
+
+.repocontainer {
+  @include span-columns(8);
+}

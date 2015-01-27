@@ -1,0 +1,36 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+.containerdiv {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .containerdiv::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.usercontainer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .usercontainer:last-child {
+    margin-right: 0; }
+
+.repocontainer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .repocontainer:last-child {
+    margin-right: 0; }
+
+/*# sourceMappingURL=main.css.map */
