@@ -25,12 +25,15 @@ html {
   .usercontainer:last-child {
     margin-right: 0; }
 
-.repocontainer {
+.repositories li {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%; }
-  .repocontainer:last-child {
+  width: 65.88078%;
+  list-style: none; }
+  .repositories li:last-child {
+    margin-right: 0; }
+  .repositories li:nth-child(n) {
     margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */

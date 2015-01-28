@@ -3,12 +3,14 @@
 
 .containerdiv {
   @include outer-container;
-  }
 
+}
 .usercontainer {
   @include span-columns(4);
-}
 
-.repocontainer {
+}
+.repositories li {
   @include span-columns(8);
+  @include omega(n);
+  list-style: none;
 }
