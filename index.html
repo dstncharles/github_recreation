@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Github</title>
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="/octicons/octicons.css">
+  <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
 </head>
 
 <body>
@@ -32,11 +32,14 @@
     <div class="repositories">
     <li>
       <a href="<%= html_url %>"><%= name %></a>
-      <%= stargazers_count %>
       <%= forks_count %>
-      <%= stargazers_url %>
-        <span class="octicon octicon-repo-forked"></span>
-      <%= forks_url %>
+      <a href="<%= forks_url %>">
+      <span class="octicon octicon-repo-forked"></span>
+    </a>
+    <%= stargazers_count %>
+    <a href="<%= stargazers_url %>">
+      <span class="octicon octicon-star"></span>
+    </a>
     </li>
   </div>
   </script>
