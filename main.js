@@ -3,9 +3,8 @@
 
   var dataUrl = "https://api.github.com/users/dstncharles";
 
-  // var myGitHubAddress = "https://api.github.com/users/dstncharles/repos"
-  // var githubUrl = myGitHubAddress + "?access_token=" + window.token;
-
+  var myGitHubAddress = "https://api.github.com/users/dstncharles/repos"
+  var githubUrl = myGitHubAddress + "?access_token=" + window.token;
 
   //1.Build HTML for skeleton of page
   //2.Determin what needs templated
@@ -19,6 +18,7 @@
   //7.Render on page
   //
 
+  //github token block//
   $(document).ready(function() {
     if (typeof githubToken !== 'undefined') {
       $.ajaxSetup({
@@ -27,15 +27,20 @@
         }
       });
     }
+
+    // //user info block//
+    var userInfoTemplate = _.template($('[data-template-name=userInfo]').text());
+    var $userInfoBoxUl = $(".userBox");
+    $.ajax(dataUrl).done(function(userBox) {
+      $userInfoBoxUl.append(userInfoTemplate(userBox));
+    });
+
+    //repository block//
     var repoTemplate = _.template($('[data-template-name=repo]').text());
-    console.log(repoTemplate);
     var $repositoryUl = $(".repositories");
-    console.log($repositoryUl);
     $.ajax(dataUrl + "/repos").done(function(reposArray) {
       _.each(reposArray, function(repoObject) {
-        console.log(repoTemplate(repoObject));
         $repositoryUl.append(repoTemplate(repoObject));
-        // console.log(repoObject);
       });
     });
   });

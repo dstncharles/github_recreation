@@ -10,8 +10,19 @@
 <body>
   <ul class="repositories">
   </ul>
+  <ul class="userBox">
+  </ul>
+
   <div class="containerdiv">Container</div>
-  <div class="usercontainer">User</div>
+
+  <script type="text/template" data-template-name="userInfo">
+    <li>
+      <%= owner %>
+      <%= login %>
+      <%= avatar_url %>
+    </li>
+  </script>
+
   <script type="text/template" data-template-name="repo">
     <li>
       <%= name %>
