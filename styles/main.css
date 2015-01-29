@@ -21,7 +21,8 @@ html {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 31.76157%;
+  list-style: none; }
   .usercontainer:last-child {
     margin-right: 0; }
 

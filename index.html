@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Github</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/octicons/octicons.css">
 </head>
 
 <body>
@@ -16,6 +17,7 @@
   <div class="containerdiv">Container</div>
 
   <script type="text/template" data-template-name="userInfo">
+    <div class="usercontainer">
     <li>
       <a href="<%= avatar_url %>">
         <img src="<%= avatar_url %>" alt="<%= avatar_url %>">
@@ -23,18 +25,20 @@
       <%= name %>
       <%= login %>
     </li>
+  </div>
   </script>
 
   <script type="text/template" data-template-name="repo">
+    <div class="repositories">
     <li>
-      <a href="<%= html_url %>">
-        <a href="<%= name %>">
-      </a>
+      <a href="<%= html_url %>"><%= name %></a>
       <%= stargazers_count %>
       <%= forks_count %>
       <%= stargazers_url %>
+        <span class="octicon octicon-repo-forked"></span>
       <%= forks_url %>
     </li>
+  </div>
   </script>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
