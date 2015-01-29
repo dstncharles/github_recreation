@@ -17,9 +17,11 @@
 
   <script type="text/template" data-template-name="userInfo">
     <li>
-      <%= owner %>
+      <a href="<%= avatar_url %>">
+        <img src="<%= avatar_url %>" alt="<%= avatar_url %>">
+      </a>
+      <%= name %>
       <%= login %>
-      <%= avatar_url %>
     </li>
   </script>
 
